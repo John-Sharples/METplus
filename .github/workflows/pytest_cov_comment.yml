@@ -1,5 +1,0 @@
-name: Pytest coverage comment
-  uses: MishaKav/pytest-coverage-comment@main
-  with:
-    pytest-coverage-path: ./pytest-coverage.txt
-    junitxml-path: ./pytest.xml
