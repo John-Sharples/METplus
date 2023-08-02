@@ -123,6 +123,7 @@ jobs:
           tag_max_pages: 15
 
   use_case_tests:
+    permissions: write-all
     name: Use Case Tests
     runs-on: ubuntu-latest
     needs: [get_image, update_data_volumes, job_control]
