@@ -154,7 +154,14 @@ jobs:
         id: run_tests
         with:
           categories: ${{ matrix.categories }}
-
+      
+      # make coverage comment
+      - name: Pytest coverage comment
+        uses: MishaKav/pytest-coverage-comment@main
+        with:
+          pytest-coverage-path: ./pytest-coverage.txt
+          junitxml-path: ./pytest.xml
+          
       # copy logs with errors to error_logs directory to save as artifact
       - name: Save error logs
         id: save-errors
